@@ -12,3 +12,8 @@ This attempts to fix the bugs in opencv_contrib/modules/face/samples/sample_trai
 ```
 ./example_face_sample_train_landmark_detector -a=/Users/willsong/git/build/annot/ -c=/Users/willsong/git/opencv_contrib/modules/face/samples/sample_config_file.xml -m=/Users/willsong/git/build/runtime/test.yaml -f=/Users/willsong/git/opencv/data/lbpcascades/lbpcascade_frontalface.xml
 ```
+
+## Execute LBF:
+```
+./trainer  -a=/Users/willsong/git/build/annot/ -c=/Users/willsong/git/opencv_contrib/modules/face/samples/sample_config_file.xml -m=/Users/willsong/git/build/runtime/test.yaml -f=/Users/willsong/git/opencv/data/lbpcascades/lbpcascade_frontalface.xml
+```
