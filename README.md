@@ -3,6 +3,11 @@
 This attempts to fix the bugs in opencv_contrib/modules/face/samples/sample_train_landmark_detector.cpp
 Also fixes bugs in modules/face/samples/facemark_demo_lbf.cpp
 
+## Execute python annotator:
+```
+python annotate.py /Users/willsong/Downloads/archive/CAT_06/ ../assets/test/
+```
+
 ## Execute:
 ```
 ./trainer  -a=/Users/willsong/git/build/annot/ -c=/Users/willsong/git/opencv_contrib/modules/face/samples/sample_config_file.xml -m=/Users/willsong/git/build/runtime/test.yaml -f=/Users/willsong/git/opencv/data/lbpcascades/lbpcascade_frontalface.xml
