@@ -10,6 +10,9 @@ if __name__ == '__main__':
     origPath = sys.argv[1]
     targetPath = sys.argv[2]
 
+    imageList = []
+    annotList = []
+
     entries = os.listdir(origPath)
     for fname in entries:
         fullPath = os.path.join(origPath, fname)
@@ -52,5 +55,16 @@ n_points: 9
                 fh.write(output)
             shutil.copyfile(imgPath, newImgPath)
             print('Copied {0} to {1} and annoated in {2}'.format(imgPath, newImgPath, annotPath))
+
+            imageList.append(newImgPath)
+            annotList.append(annotPath)
+
+    annotFile = os.path.join(targetPath, 'annot.txt')
+    with open(annotFile, 'w') as fh:
+        fh.write("\n".join(annotList))
+
+    imageFile = os.path.join(targetPath, 'images.txt')
+    with open(imageFile, 'w') as fh:
+        fh.write("\n".join(imageList))
 
     print('Done')

@@ -5,7 +5,7 @@ Also fixes bugs in modules/face/samples/facemark_demo_lbf.cpp
 
 ## Execute python annotator:
 ```
-python annotate.py /Users/willsong/Downloads/archive/CAT_06/ ../assets/test/
+python annotate.py /Users/willsong/Downloads/archive/CAT_06/ /User/willsong/git/opencv-facemark-trainer/assets/test/
 ```
 
 ## Execute:
@@ -21,7 +21,7 @@ python annotate.py /Users/willsong/Downloads/archive/CAT_06/ ../assets/test/
 
 ## Execute LBF:
 ```
-./trainer  -a=/Users/willsong/git/build/annot/ -c=/Users/willsong/git/opencv_contrib/modules/face/samples/sample_config_file.xml -m=/Users/willsong/git/build/runtime/test.yaml -f=/Users/willsong/git/opencv/data/lbpcascades/lbpcascade_frontalface.xml
+./trainer /Users/willsong/git/opencv-facemark-trainer/assets/cascade/haarcascade_frontalcatface_extended.xml /Users/willsong/git/opencv-facemark-trainer/assets/test/images.txt /Users/willsong/git/opencv-facemark-trainer/assets/test/annot.txt /Users/willsong/git/runtime/test.yaml
 ```
 ---
 ### References
