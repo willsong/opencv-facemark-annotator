@@ -24,7 +24,11 @@ static bool myDetector(InputArray image, OutputArray faces, CascadeClassifier *f
 
     std::vector<Rect> faces_;
     face_cascade->detectMultiScale(gray, faces_, 1.4, 2, CASCADE_SCALE_IMAGE, Size(30, 30));
-    Mat(faces_).copyTo(faces);
+    cout << "willsong detector: " << faces_.size() << endl;
+    if (faces_.size() > 0)
+    {
+        Mat(faces_).copyTo(faces);
+    }
     return true;
 }
 
@@ -87,7 +91,11 @@ int main(int argc,char** argv){
     //create a pointer to call the base class
     //pass the face cascade xml file which you want to pass as a detector
     CascadeClassifier face_cascade;
-    face_cascade.load(cascade_name);
+    if (!face_cascade.load(cascade_name))
+    {
+        cout << "failed to load cascade file!!!" << endl;
+        return -1;
+    }
     cout << "willsong debug 2: " << cascade_name << endl;
     FacemarkKazemi::Params params;
     params.configfile = configfile_name;
