@@ -51,9 +51,9 @@ n_points: 9
 
             annotPath = os.path.join(targetPath, imgName + '.txt')
             newImgPath = os.path.join(targetPath, imgName)
+            shutil.copyfile(imgPath, newImgPath)
             with open(annotPath, 'w') as fh:
                 fh.write(output)
-            shutil.copyfile(imgPath, newImgPath)
             print('Copied {0} to {1} and annoated in {2}'.format(imgPath, newImgPath, annotPath))
 
             imageList.append(newImgPath)

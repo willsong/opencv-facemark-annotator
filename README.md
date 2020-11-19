@@ -5,7 +5,7 @@ Also fixes bugs in modules/face/samples/facemark_demo_lbf.cpp
 
 ## Execute python annotator:
 ```
-python annotate.py /Users/willsong/Downloads/archive/CAT_06/ /User/willsong/git/opencv-facemark-trainer/assets/test/
+python annotate.py /Users/willsong/Downloads/archive/CAT_06/ /Users/willsong/git/opencv-facemark-trainer/assets/test/
 ```
 
 ## Execute:

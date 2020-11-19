@@ -79,20 +79,23 @@ int main(int argc, char** argv)
     std::vector<String> images_train;
     std::vector<String> landmarks_train;
     loadDatasetList(images_path,annotations_path,images_train,landmarks_train);
-    cout << "willsong : image size: " << images_train.size() << endl;
 
     std::vector<Mat> v_images;
     std::vector<Point2f> facial_points;
     for(size_t i=0;i<images_train.size();i++){
         printf("%i/%i :: %s\n", (int)(i+1), (int)images_train.size(),images_train[i].c_str());
-        cout << "willsong: image: " << images_train[i] << endl;
         Mat image = imread(images_train[i].c_str());
         std::cout << "loading facepoints" << std::endl;
         loadFacePoints(landmarks_train[i],facial_points);
         std::cout << "adding trainig sample" << std::endl;
         facemark->addTrainingSample(image, facial_points);
+        for (auto fp : facial_points)
+        {
+            std::cout << fp <<std::endl;
+        }
         v_images.push_back(image);
     }
+    return 0;
 
     /*train the Algorithm*/
     facemark->training();
