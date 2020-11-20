@@ -3,6 +3,12 @@
 This attempts to fix the bugs in opencv_contrib/modules/face/samples/sample_train_landmark_detector.cpp
 Also fixes bugs in modules/face/samples/facemark_demo_lbf.cpp
 
+## Cmake:
+
+```
+cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -DBUILD_EXAMPLES=ON -DCMAKE_BUILD_TYPE=Debug ../opencv
+```
+
 ## Execute python annotator:
 ```
 python annotate.py /Users/willsong/Downloads/archive/CAT_06/ /Users/willsong/git/opencv-facemark-trainer/assets/test/
