@@ -69,7 +69,7 @@ n_points: 9
             annotList.append(annotPath)
 
             cnt += 1
-            if cnt > max_images:
+            if max_images > 0 and cnt > max_images:
                 print('Reached image limit of {0}'.format(max_images))
                 break
 
