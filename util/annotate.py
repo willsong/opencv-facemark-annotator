@@ -2,7 +2,7 @@ import os
 import shutil
 import sys
 
-max_images = 100
+max_images = 0
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
